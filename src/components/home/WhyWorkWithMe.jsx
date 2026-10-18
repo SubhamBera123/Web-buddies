@@ -41,36 +41,39 @@ export const WhyWorkWithMe = () => {
   ];
 
   return (
-    <section className="py-20 relative bg-[#090D17] border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative bg-[#050505] border-t border-white/10 overflow-hidden">
+      {/* Background architectural dot texture */}
+      <div className="absolute inset-0 bg-dot-pattern opacity-20 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider block mb-2">
+          <span className="text-xs font-mono font-bold text-[#D2B477] uppercase tracking-wider block mb-2">
             The Studio Difference
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#F5F3EF] tracking-tight">
             Why High-Growth Businesses Work With Me
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 mt-3 leading-relaxed">
-            Most agencies charge massive agency markups and outsource your project to junior freelancers. I provide boutique senior craftsmanship with radical transparency, rigorous quality, and fixed timelines.
+          <p className="text-sm sm:text-base text-[#A09B92] mt-3 leading-relaxed">
+            Direct senior craftsmanship with transparent pricing, guaranteed delivery timelines, and 100% code ownership.
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {differentiators.map((diff, index) => {
             const Icon = diff.icon;
             return (
               <div 
                 key={index}
-                className="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 relative overflow-hidden group"
+                className="glass-card rounded-2xl p-6 border border-white/10 hover:border-[rgba(184,148,88,0.50)] hover:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.8),0_0_20px_-2px_rgba(184,148,88,0.12)] hover:-translate-y-1 transition-all duration-300 space-y-3 relative overflow-hidden group bg-[#111214]"
               >
-                <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-xl bg-[#171819] border border-[rgba(184,148,88,0.30)] text-[#D2B477] flex items-center justify-center group-hover:scale-105 group-hover:bg-[#B89458]/10 transition-transform shadow-sm shadow-[#B89458]/10">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-bold text-white group-hover:text-blue-300 transition-colors">
+                <h3 className="text-base font-bold text-[#F5F3EF] group-hover:text-[#D2B477] transition-colors">
                   {diff.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#A09B92] leading-relaxed">
                   {diff.description}
                 </p>
               </div>
@@ -79,14 +82,14 @@ export const WhyWorkWithMe = () => {
         </div>
 
         {/* Callout Strip */}
-        <div className="mt-12 glass-panel-glow rounded-2xl p-6 sm:p-8 border border-blue-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-14 glass-panel-glow rounded-2xl p-6 sm:p-8 border border-[rgba(184,148,88,0.40)] flex flex-col md:flex-row items-center justify-between gap-6 bg-[#111214] shadow-xl">
           <div>
-            <h4 className="text-lg font-bold text-white">Have a specific project or deadline in mind?</h4>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1">Get an honest feasibility assessment and a tailored quotation within 4–6 business hours.</p>
+            <h4 className="text-lg font-bold text-[#F5F3EF]">Have a specific project or deadline in mind?</h4>
+            <p className="text-xs sm:text-sm text-[#A09B92] mt-1 leading-relaxed">Get an honest feasibility assessment and tailored quotation within 4–6 business hours.</p>
           </div>
           <Link to="/contact" className="shrink-0">
             <Button variant="primary" size="md" icon={ArrowRight} iconPosition="right">
-              Request Your Free Consultation
+              Request Free Consultation
             </Button>
           </Link>
         </div>

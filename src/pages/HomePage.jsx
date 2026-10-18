@@ -19,7 +19,7 @@ export const HomePage = () => {
   const [selectedVideoProject, setSelectedVideoProject] = useState(null);
 
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#050505] text-[#F5F3EF] flex flex-col font-sans bg-canvas-textured selection:bg-[#B89458]/30 selection:text-[#D2B477]">
       {/* 1 & 2. Compact Studio Introduction without conventional hero/navbar + Statement */}
       <HomeStudioIntro 
         onOpenLiveDemo={(project) => setSelectedDemoProject(project)}
