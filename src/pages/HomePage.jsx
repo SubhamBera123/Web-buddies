@@ -11,6 +11,7 @@ import { EnquiryCTA } from '../components/home/EnquiryCTA';
 import { Footer } from '../components/layout/Footer';
 import { LiveDemoModal } from '../components/common/LiveDemoModal';
 import { ProjectVideoModal } from '../components/common/ProjectVideoModal';
+import { LaptopIntro } from '../components/home/LaptopIntro';
 import { useScrollTop } from '../hooks/useScrollTop';
 
 export const HomePage = () => {
@@ -20,6 +21,9 @@ export const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#F5F3EF] flex flex-col font-sans bg-canvas-textured selection:bg-[#B89458]/30 selection:text-[#D2B477]">
+      {/* Interactive 3D Laptop Opening Intro Screen */}
+      <LaptopIntro />
+
       {/* 1 & 2. Compact Studio Introduction without conventional hero/navbar + Statement */}
       <HomeStudioIntro 
         onOpenLiveDemo={(project) => setSelectedDemoProject(project)}
