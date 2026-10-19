@@ -1,0 +1,53 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="goldGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#D2B477" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#B89458" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cyberBorder" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D2B477"/>
+      <stop offset="0.5" stop-color="#B89458" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#242730"/>
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="300" y1="180" x2="300" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22252D"/>
+      <stop offset="1" stop-color="#0D0E12"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(184, 148, 88, 0.08)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="600" fill="#090A0E"/>
+  <rect width="600" height="600" fill="url(#grid)"/>
+  <circle cx="300" cy="280" r="240" fill="url(#goldGlow)"/>
+
+  <!-- Geometric Tech Outer Circle -->
+  <circle cx="300" cy="280" r="210" stroke="url(#cyberBorder)" stroke-width="2" stroke-dasharray="12 6" opacity="0.6"/>
+  <circle cx="300" cy="280" r="195" stroke="#B89458" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Silhouette Head -->
+  <circle cx="300" cy="230" r="75" fill="url(#avatarGrad)" stroke="#B89458" stroke-width="2"/>
+  <circle cx="300" cy="230" r="68" stroke="rgba(210, 180, 119, 0.3)" stroke-width="1"/>
+
+  <!-- Silhouette Shoulders & Torso -->
+  <path d="M 170 480 C 170 380, 210 335, 300 335 C 390 335, 430 380, 430 480 Z" fill="url(#avatarGrad)" stroke="#B89458" stroke-width="2"/>
+
+  <!-- Stylized Monogram AV in center -->
+  <g transform="translate(300, 235)">
+    <path d="M -24 16 L 0 -32 L 24 16 L 12 16 L 0 -8 L -12 16 Z" fill="#D2B477"/>
+    <path d="M -8 2 L 8 2" stroke="#D2B477" stroke-width="3"/>
+  </g>
+
+  <!-- Tech Telemetry HUD Corners -->
+  <path d="M 30 60 L 30 30 L 60 30" stroke="#D2B477" stroke-width="2.5" fill="none"/>
+  <path d="M 570 60 L 570 30 L 540 30" stroke="#D2B477" stroke-width="2.5" fill="none"/>
+  <path d="M 30 540 L 30 570 L 60 570" stroke="#D2B477" stroke-width="2.5" fill="none"/>
+  <path d="M 570 540 L 570 570 L 540 570" stroke="#D2B477" stroke-width="2.5" fill="none"/>
+
+  <!-- Subtitle Tag -->
+  <rect x="180" y="525" width="240" height="34" rx="17" fill="#111215" stroke="#B89458" stroke-width="1.5"/>
+  <text x="300" y="547" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" fill="#D2B477" text-anchor="middle" letter-spacing="2">SENIOR ARCHITECT</text>
+</svg>

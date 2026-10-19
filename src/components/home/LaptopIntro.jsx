@@ -852,10 +852,9 @@ export const LaptopIntro = ({ onComplete }) => {
   if (!isVisible) return null;
 
   return (
-    <div 
-      className={`fixed inset-0 z-50 flex flex-col justify-between p-4 sm:p-6 bg-[#050505] select-none overflow-hidden transition-opacity duration-700 ${
-        stage === 'entering' ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+    <div
+      className={`fixed inset-0 z-50 flex flex-col justify-between p-4 sm:p-6 bg-[#050505] select-none overflow-hidden transition-opacity duration-700 ${stage === 'entering' ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
       style={{
         transition: 'opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1)'
       }}
@@ -865,7 +864,7 @@ export const LaptopIntro = ({ onComplete }) => {
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
 
       {/* Atmospheric Amber/Gold Glow */}
-      <div 
+      <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[500px] rounded-full blur-[140px] pointer-events-none transition-all duration-700"
         style={{
           background: 'radial-gradient(circle, rgba(210, 180, 119, 0.22) 0%, rgba(184, 148, 88, 0.08) 50%, transparent 75%)',
@@ -899,8 +898,8 @@ export const LaptopIntro = ({ onComplete }) => {
       {/* Center 3D WebGL Canvas Stage */}
       <div className="relative flex-1 w-full h-full flex items-center justify-center overflow-hidden">
         {/* Three.js Canvas Container */}
-        <div 
-          ref={mountRef} 
+        <div
+          ref={mountRef}
           className="absolute inset-0 cursor-grab active:cursor-grabbing"
           title="Drag mouse to rotate ASUS TUF Gaming A15 360 degrees"
         />
@@ -921,7 +920,7 @@ export const LaptopIntro = ({ onComplete }) => {
 
         {/* When in Stage 2 ('docked'): Transparent interactive target directly over the 3D screen */}
         {stage === 'docked' && (
-          <div 
+          <div
             onClick={handleEnterHomepage}
             onMouseEnter={() => handleScreenHover(true)}
             onMouseLeave={() => handleScreenHover(false)}
@@ -951,7 +950,7 @@ export const LaptopIntro = ({ onComplete }) => {
           EXPLORE THE WEBSITE INTERACTION (Stage 1)
           ========================================================================= */}
       <footer className="relative z-20 w-full max-w-xl mx-auto flex flex-col items-center text-center pb-3">
-        
+
         {/* Animated Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#111215] border border-[#B89458]/40 mb-2 shadow-md">
           <span className="w-1.5 h-1.5 rounded-full bg-[#D2B477] animate-pulse"></span>
