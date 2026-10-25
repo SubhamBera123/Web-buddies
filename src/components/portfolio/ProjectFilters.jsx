@@ -48,11 +48,10 @@ export const ProjectFilters = ({
       <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none pt-1">
         <button
           onClick={() => onSelectCategory('all')}
-          className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${
-            selectedCategory === 'all'
+          className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${selectedCategory === 'all'
               ? 'bg-gradient-to-r from-[#B89458] to-[#D2B477] text-[#050505] shadow-md shadow-[#B89458]/20 font-bold border border-[#D2B477]'
               : 'bg-[#111215] text-[#A09B92] hover:text-[#F5F3EF] hover:bg-[#1a1c22] border border-white/10 hover:border-[#B89458]/40'
-          }`}
+            }`}
         >
           All Industries ({totalCount})
         </button>
@@ -63,11 +62,10 @@ export const ProjectFilters = ({
             <button
               key={cat.key}
               onClick={() => onSelectCategory(cat.key)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${
-                isSelected
+              className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 cursor-pointer ${isSelected
                   ? 'bg-gradient-to-r from-[#B89458] to-[#D2B477] text-[#050505] shadow-md shadow-[#B89458]/20 font-bold border border-[#D2B477]'
                   : 'bg-[#111215] text-[#A09B92] hover:text-[#F5F3EF] hover:bg-[#1a1c22] border border-white/10 hover:border-[#B89458]/40'
-              }`}
+                }`}
             >
               {cat.label}
             </button>

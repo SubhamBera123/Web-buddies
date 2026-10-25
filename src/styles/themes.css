@@ -1,0 +1,557 @@
+/* ==========================================================================
+   GLOBAL 3-THEME ARCHITECTURE: ORIGINAL | LUXURY EDITORIAL | CYBER FUTURISTIC
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROOT VARIABLES PER THEME
+   -------------------------------------------------------------------------- */
+
+:root[data-theme="original"],
+:root:not([data-theme]) {
+  --theme-id: 'original';
+  --font-family-headings: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-family-body: 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  --theme-bg-canvas: #050505;
+  --theme-surface-primary: #111214;
+  --theme-surface-card: #171819;
+  --theme-text-primary: #F5F3EF;
+  --theme-text-secondary: #A09B92;
+  --theme-accent: #B89458;
+  --theme-accent-light: #D2B477;
+  --theme-border-subtle: rgba(255, 255, 255, 0.10);
+  --theme-border-accent: rgba(184, 148, 88, 0.40);
+}
+
+:root[data-theme="luxury"] {
+  --theme-id: 'luxury';
+  --font-family-headings: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-family-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  --theme-bg-canvas: #FAF8F5;
+  --theme-surface-primary: #F2ECE1;
+  --theme-surface-card: #FFFFFF;
+  --theme-text-primary: #1C1917;
+  --theme-text-secondary: #655E56;
+  --theme-accent: #9E7B4F;
+  --theme-accent-light: #C5A880;
+  --theme-border-subtle: rgba(28, 25, 23, 0.10);
+  --theme-border-accent: rgba(158, 123, 79, 0.38);
+}
+
+:root[data-theme="futuristic"] {
+  --theme-id: 'futuristic';
+  --font-family-headings: 'Space Grotesk', 'Orbitron', system-ui, sans-serif;
+  --font-family-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  --theme-bg-canvas: #02040A;
+  --theme-surface-primary: #060D1E;
+  --theme-surface-card: #091328;
+  --theme-text-primary: #F0FDF4;
+  --theme-text-secondary: #7DD3FC;
+  --theme-accent: #00F0FF;
+  --theme-accent-light: #67E8F9;
+  --theme-border-subtle: rgba(0, 240, 255, 0.18);
+  --theme-border-accent: rgba(0, 240, 255, 0.50);
+}
+
+/* --------------------------------------------------------------------------
+   2. SMOOTH GLOBAL THEME TRANSITIONS
+   -------------------------------------------------------------------------- */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *:before,
+html.theme-transitioning *:after {
+  transition: background-color 0.4s ease,
+              border-color 0.4s ease,
+              color 0.4s ease,
+              box-shadow 0.4s ease,
+              fill 0.4s ease,
+              stroke 0.4s ease !important;
+  transition-delay: 0s !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. THEME 2: LUXURY EDITORIAL ATELIER SYSTEM (.theme-luxury)
+   -------------------------------------------------------------------------- */
+
+.theme-luxury body,
+.theme-luxury {
+  background-color: #FAF8F5 !important;
+  color: #1C1917 !important;
+  font-family: var(--font-family-body);
+}
+
+/* Luxury Canvas and Page Wrappers */
+.theme-luxury .min-h-screen,
+.theme-luxury .bg-\[\#050505\],
+.theme-luxury .bg-\[\#0B0F19\],
+.theme-luxury .bg-\[\#07090E\],
+.theme-luxury .bg-slate-950 {
+  background-color: #FAF8F5 !important;
+  color: #1C1917 !important;
+}
+
+.theme-luxury .bg-canvas-textured {
+  background-color: #FAF8F5 !important;
+  background-image: 
+    radial-gradient(circle at 50% -10%, rgba(158, 123, 79, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 85% 60%, rgba(197, 168, 128, 0.06) 0%, transparent 50%),
+    linear-gradient(to right, rgba(158, 123, 79, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(158, 123, 79, 0.04) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px !important;
+}
+
+.theme-luxury .bg-wave-lines {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(158, 123, 79, 0.08) 0%, transparent 65%),
+    linear-gradient(180deg, #FAF8F5 0%, #F5EFE6 100%) !important;
+}
+
+/* Luxury Editorial Headings */
+.theme-luxury h1,
+.theme-luxury h2,
+.theme-luxury h3,
+.theme-luxury .font-serif-luxury {
+  font-family: var(--font-family-headings);
+  color: #1C1917 !important;
+  letter-spacing: -0.015em;
+}
+
+.theme-luxury h1 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.theme-luxury h2 {
+  font-weight: 600;
+}
+
+/* Luxury Text Treatments */
+.theme-luxury .text-\[\#F5F3EF\],
+.theme-luxury .text-slate-100,
+.theme-luxury .text-white {
+  color: #1C1917 !important;
+}
+
+.theme-luxury .text-\[\#A09B92\],
+.theme-luxury .text-slate-300,
+.theme-luxury .text-slate-400,
+.theme-luxury .text-slate-500 {
+  color: #655E56 !important;
+}
+
+.theme-luxury .text-\[\#D2B477\],
+.theme-luxury .text-\[\#B89458\],
+.theme-luxury .text-blue-400,
+.theme-luxury .text-amber-300,
+.theme-luxury .text-amber-400 {
+  color: #9E7B4F !important;
+}
+
+/* Luxury Gradients */
+.theme-luxury .text-gradient-gold,
+.theme-luxury .text-gradient-blue,
+.theme-luxury .text-gradient-gold-animated {
+  background: linear-gradient(135deg, #1C1917 0%, #9E7B4F 50%, #C5A880 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Luxury Panels and Cards */
+.theme-luxury .glass-panel,
+.theme-luxury .glass-card,
+.theme-luxury .bg-\[\#111214\],
+.theme-luxury .bg-\[\#171819\],
+.theme-luxury .bg-slate-900,
+.theme-luxury .bg-\[\#0D0E12\],
+.theme-luxury .bg-\[\#0f1422\],
+.theme-luxury .bg-\[\#0a0d16\],
+.theme-luxury .bg-\[\#0f1922\],
+.theme-luxury .bg-\[\#0a1216\] {
+  background: #FFFFFF !important;
+  border-color: rgba(158, 123, 79, 0.22) !important;
+  box-shadow: 0 16px 36px -12px rgba(158, 123, 79, 0.10), 0 0 1px rgba(158, 123, 79, 0.25) !important;
+}
+
+.theme-luxury .glass-panel-glow {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(158, 123, 79, 0.45) !important;
+  box-shadow: 0 20px 45px -15px rgba(158, 123, 79, 0.16), 0 0 1px 1px rgba(197, 168, 128, 0.3) !important;
+}
+
+.theme-luxury .glass-card:hover {
+  border-color: #9E7B4F !important;
+  box-shadow: 0 24px 50px -15px rgba(158, 123, 79, 0.18), 0 0 1px 1px #9E7B4F !important;
+  transform: translateY(-4px);
+}
+
+/* Luxury Borders */
+.theme-luxury .border-white\/10,
+.theme-luxury .border-white\/5,
+.theme-luxury .border-slate-800,
+.theme-luxury .border-slate-800\/80,
+.theme-luxury .border-slate-800\/60,
+.theme-luxury .border-slate-700 {
+  border-color: rgba(158, 123, 79, 0.20) !important;
+}
+
+/* Luxury Buttons */
+.theme-luxury button.bg-gradient-to-r,
+.theme-luxury a button.bg-gradient-to-r,
+.theme-luxury .btn-primary-luxury {
+  background: linear-gradient(135deg, #1C1917 0%, #2E2822 100%) !important;
+  color: #FAF8F5 !important;
+  border: 1px solid #9E7B4F !important;
+  box-shadow: 0 6px 18px -4px rgba(28, 25, 23, 0.20) !important;
+}
+
+.theme-luxury button.bg-gradient-to-r:hover {
+  background: linear-gradient(135deg, #9E7B4F 0%, #C5A880 100%) !important;
+  color: #1C1917 !important;
+  border-color: #9E7B4F !important;
+}
+
+.theme-luxury button.bg-\[\#171819\],
+.theme-luxury .btn-secondary-luxury {
+  background: #F2ECE1 !important;
+  color: #1C1917 !important;
+  border: 1px solid rgba(158, 123, 79, 0.30) !important;
+}
+
+.theme-luxury button.bg-\[\#171819\]:hover {
+  background: #E8E0D1 !important;
+  color: #1C1917 !important;
+}
+
+/* Luxury Badges and Tags */
+.theme-luxury .bg-\[\#B89458\]\/10,
+.theme-luxury .bg-blue-500\/10,
+.theme-luxury .bg-cyan-500\/10,
+.theme-luxury .bg-amber-400\/10 {
+  background-color: rgba(158, 123, 79, 0.12) !important;
+  border-color: rgba(158, 123, 79, 0.30) !important;
+  color: #9E7B4F !important;
+}
+
+/* Luxury Inputs */
+.theme-luxury input,
+.theme-luxury textarea,
+.theme-luxury select {
+  background-color: #FFFFFF !important;
+  color: #1C1917 !important;
+  border-color: rgba(158, 123, 79, 0.30) !important;
+}
+
+.theme-luxury input:focus,
+.theme-luxury textarea:focus,
+.theme-luxury select:focus {
+  border-color: #9E7B4F !important;
+  box-shadow: 0 0 0 2px rgba(158, 123, 79, 0.20) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. THEME 3: CYBER FUTURISTIC SYSTEM (.theme-futuristic)
+   -------------------------------------------------------------------------- */
+
+.theme-futuristic body,
+.theme-futuristic {
+  background-color: #02040A !important;
+  color: #F0FDF4 !important;
+  font-family: var(--font-family-body);
+}
+
+/* Cyber Canvas and Page Wrappers */
+.theme-futuristic .min-h-screen,
+.theme-futuristic .bg-\[\#050505\],
+.theme-futuristic .bg-\[\#0B0F19\],
+.theme-futuristic .bg-\[\#07090E\],
+.theme-futuristic .bg-slate-950 {
+  background-color: #02040A !important;
+  color: #F0FDF4 !important;
+}
+
+.theme-futuristic .bg-canvas-textured,
+.theme-futuristic .bg-wave-lines {
+  background-color: #02040A !important;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.12) 0%, transparent 65%),
+    radial-gradient(circle at 85% 60%, rgba(139, 92, 246, 0.08) 0%, transparent 55%),
+    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px !important;
+}
+
+/* Cyber Headings */
+.theme-futuristic h1,
+.theme-futuristic h2,
+.theme-futuristic h3,
+.theme-futuristic .font-cyber {
+  font-family: var(--font-family-headings);
+  color: #F0FDF4 !important;
+  letter-spacing: 0.015em;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.35);
+}
+
+.theme-futuristic h1 {
+  font-weight: 800;
+}
+
+/* Cyber Text Treatments */
+.theme-futuristic .text-\[\#F5F3EF\],
+.theme-futuristic .text-slate-100,
+.theme-futuristic .text-white {
+  color: #F0FDF4 !important;
+}
+
+.theme-futuristic .text-\[\#A09B92\],
+.theme-futuristic .text-slate-300,
+.theme-futuristic .text-slate-400 {
+  color: #7DD3FC !important;
+}
+
+.theme-futuristic .text-\[\#D2B477\],
+.theme-futuristic .text-\[\#B89458\],
+.theme-futuristic .text-blue-400,
+.theme-futuristic .text-amber-300,
+.theme-futuristic .text-amber-400 {
+  color: #00F0FF !important;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6) !important;
+}
+
+/* Cyber Gradients */
+.theme-futuristic .text-gradient-gold,
+.theme-futuristic .text-gradient-blue,
+.theme-futuristic .text-gradient-gold-animated {
+  background: linear-gradient(90deg, #F0FDF4 0%, #00F0FF 45%, #8B5CF6 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Cyber Panels and Cards */
+.theme-futuristic .glass-panel,
+.theme-futuristic .glass-card,
+.theme-futuristic .bg-\[\#111214\],
+.theme-futuristic .bg-\[\#171819\],
+.theme-futuristic .bg-slate-900,
+.theme-futuristic .bg-\[\#0D0E12\],
+.theme-futuristic .bg-\[\#0f1422\],
+.theme-futuristic .bg-\[\#0a0d16\],
+.theme-futuristic .bg-\[\#0f1922\],
+.theme-futuristic .bg-\[\#0a1216\] {
+  background: rgba(6, 13, 29, 0.88) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-color: rgba(0, 240, 255, 0.32) !important;
+  box-shadow: 0 0 25px -5px rgba(0, 240, 255, 0.18), inset 0 1px 0 rgba(0, 240, 255, 0.3) !important;
+}
+
+.theme-futuristic .glass-panel-glow {
+  background: rgba(6, 13, 29, 0.94) !important;
+  border: 1px solid rgba(0, 240, 255, 0.60) !important;
+  box-shadow: 0 0 35px -5px rgba(0, 240, 255, 0.30), inset 0 1px 0 rgba(0, 240, 255, 0.5) !important;
+}
+
+.theme-futuristic .glass-card:hover {
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 35px -5px rgba(0, 240, 255, 0.35), inset 0 1px 0 #00F0FF !important;
+  transform: translateY(-4px);
+}
+
+/* Cyber Borders */
+.theme-futuristic .border-white\/10,
+.theme-futuristic .border-white\/5,
+.theme-futuristic .border-slate-800,
+.theme-futuristic .border-slate-800\/80,
+.theme-futuristic .border-slate-800\/60,
+.theme-futuristic .border-slate-700 {
+  border-color: rgba(0, 240, 255, 0.22) !important;
+}
+
+/* Cyber Buttons */
+.theme-futuristic button.bg-gradient-to-r,
+.theme-futuristic a button.bg-gradient-to-r {
+  background: linear-gradient(135deg, #00F0FF 0%, #0284C7 100%) !important;
+  color: #02040A !important;
+  font-weight: 800 !important;
+  border: 1px solid #38BDF8 !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.45) !important;
+}
+
+.theme-futuristic button.bg-gradient-to-r:hover {
+  background: linear-gradient(135deg, #38BDF8 0%, #00F0FF 100%) !important;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.65) !important;
+}
+
+.theme-futuristic button.bg-\[\#171819\] {
+  background: rgba(6, 13, 29, 0.9) !important;
+  color: #00F0FF !important;
+  border: 1px solid rgba(0, 240, 255, 0.45) !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2) !important;
+}
+
+.theme-futuristic button.bg-\[\#171819\]:hover {
+  background: rgba(14, 25, 48, 0.95) !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35) !important;
+}
+
+/* Cyber Badges and Tags */
+.theme-futuristic .bg-\[\#B89458\]\/10,
+.theme-futuristic .bg-blue-500\/10,
+.theme-futuristic .bg-cyan-500\/10,
+.theme-futuristic .bg-amber-400\/10 {
+  background-color: rgba(0, 240, 255, 0.12) !important;
+  border-color: rgba(0, 240, 255, 0.40) !important;
+  color: #00F0FF !important;
+  font-family: var(--font-family-mono);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2) !important;
+}
+
+/* Cyber Inputs */
+.theme-futuristic input,
+.theme-futuristic textarea,
+.theme-futuristic select {
+  background-color: rgba(6, 13, 29, 0.95) !important;
+  color: #F0FDF4 !important;
+  border-color: rgba(0, 240, 255, 0.35) !important;
+}
+
+.theme-futuristic input:focus,
+.theme-futuristic textarea:focus,
+.theme-futuristic select:focus {
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. DEEP COMPONENT THEME ADAPTATIONS
+   -------------------------------------------------------------------------- */
+
+/* Tables & Comparison Matrices */
+.theme-luxury table,
+.theme-luxury thead,
+.theme-luxury tbody,
+.theme-luxury tr,
+.theme-luxury td,
+.theme-luxury th {
+  border-color: rgba(158, 123, 79, 0.20) !important;
+  color: #1C1917 !important;
+}
+
+.theme-luxury th {
+  font-family: var(--font-family-headings) !important;
+  font-weight: 700 !important;
+  background-color: #FAF8F5 !important;
+  color: #1C1917 !important;
+}
+
+.theme-luxury tbody tr:hover {
+  background-color: #F7F3EB !important;
+}
+
+.theme-futuristic table,
+.theme-futuristic thead,
+.theme-futuristic tbody,
+.theme-futuristic tr,
+.theme-futuristic td,
+.theme-futuristic th {
+  border-color: rgba(0, 240, 255, 0.25) !important;
+  color: #F0FDF4 !important;
+}
+
+.theme-futuristic th {
+  font-family: var(--font-family-mono) !important;
+  background-color: #060D1E !important;
+  color: #00F0FF !important;
+}
+
+.theme-futuristic tbody tr:hover {
+  background-color: rgba(0, 240, 255, 0.08) !important;
+}
+
+/* FAQ Accordions & Details */
+.theme-luxury details,
+.theme-luxury .faq-item {
+  background-color: #FFFFFF !important;
+  border-color: rgba(158, 123, 79, 0.25) !important;
+}
+
+.theme-luxury details summary {
+  font-family: var(--font-family-headings) !important;
+  font-weight: 600 !important;
+  color: #1C1917 !important;
+}
+
+.theme-futuristic details,
+.theme-futuristic .faq-item {
+  background-color: #060D1E !important;
+  border-color: rgba(0, 240, 255, 0.30) !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.08) !important;
+}
+
+.theme-futuristic details summary {
+  font-family: var(--font-family-headings) !important;
+  color: #F0FDF4 !important;
+}
+
+/* Interactive Sliders & Progress */
+.theme-luxury input[type="range"] {
+  accent-color: #9E7B4F !important;
+}
+
+.theme-futuristic input[type="range"] {
+  accent-color: #00F0FF !important;
+}
+
+/* Modals & Dialog Overlays */
+.theme-luxury .modal-content,
+.theme-luxury [role="dialog"] {
+  background-color: #FAF8F5 !important;
+  color: #1C1917 !important;
+  border: 1px solid rgba(158, 123, 79, 0.35) !important;
+  box-shadow: 0 25px 60px -15px rgba(158, 123, 79, 0.25) !important;
+}
+
+.theme-futuristic .modal-content,
+.theme-futuristic [role="dialog"] {
+  background-color: #060D1E !important;
+  color: #F0FDF4 !important;
+  border: 1px solid rgba(0, 240, 255, 0.50) !important;
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.30) !important;
+}
+
+/* Breadcrumbs */
+.theme-luxury nav[aria-label="Breadcrumb"] {
+  color: #655E56 !important;
+  font-family: var(--font-family-body);
+}
+
+.theme-luxury nav[aria-label="Breadcrumb"] a:hover {
+  color: #9E7B4F !important;
+}
+
+.theme-futuristic nav[aria-label="Breadcrumb"] {
+  color: #7DD3FC !important;
+  font-family: var(--font-family-mono);
+}
+
+.theme-futuristic nav[aria-label="Breadcrumb"] a:hover {
+  color: #00F0FF !important;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+/* Selection Highlights */
+.theme-luxury *::selection {
+  background-color: rgba(158, 123, 79, 0.25) !important;
+  color: #1C1917 !important;
+}
+
+.theme-futuristic *::selection {
+  background-color: rgba(0, 240, 255, 0.30) !important;
+  color: #00F0FF !important;
+}
+
